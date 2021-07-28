@@ -11,10 +11,9 @@ public class Task2 {
             if (firstNumber > secondNumber) {
                 System.out.println("Некорректный ввод");
             } else {
-                int i = firstNumber + 1;
-                for (; i < secondNumber; i++) {
+                for (int i = firstNumber + 1; i < secondNumber; i++) {
                     if (i % 5 == 0 && i % 10 != 0) {
-                        System.out.print(i+" ");
+                        System.out.print(i + " ");
                     }
                 }
             }

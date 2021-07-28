@@ -1,22 +1,18 @@
 package day1;
 
-import java.util.EmptyStackException;
 import java.util.Scanner;
 
 public class Task6 {
     public static void main(String[] args) {
         try {
             Scanner Number = new Scanner(System.in);
-            int firstNumber = Number.nextInt();
-            int secondNumber = Number.nextInt();
-            if (firstNumber > secondNumber) {
+            int k = Number.nextInt();
+            if (k > 9 || k <= 0) {
                 System.out.println("Некорректный ввод");
             } else {
-                int i = firstNumber + 1;
-                for (; i < secondNumber; i++) {
-                    if (i % 5 == 0 && i % 10 != 0) {
-                        System.out.println(i);
-                    }
+                for (int i = 1; i <= k; i++) {
+                    int result = i * k;
+                    System.out.println("1 x " + k + " = " + result);
                 }
             }
         } catch (Exception e) {

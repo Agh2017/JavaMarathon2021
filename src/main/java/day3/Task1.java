@@ -7,33 +7,36 @@ public class Task1 {
     public static void main(String[] args) {
 
         Scanner city = new Scanner(System.in);
-        String inputCity = city.nextLine();
-
-        switch (inputCity){
-            case "Stop":
+        while (true) {
+            String inputCity = city.nextLine();
+            if (inputCity.equals("Stop")) {
                 break;
-            case "Москва":
-            case "Владивосток":
-            case "Ростов":
-                System.out.println("Россия");
-                break;
-            case "Рим":
-            case "Милан":
-            case "Турин":
-                System.out.println("Италия");
-                break;
-            case "Ливерпуль":
-            case "Манчестер":
-            case "Лондон":
-                System.out.println("Англия");
-                break;
-            case "Берлин":
-            case "Мюнхен":
-            case "Кёльн":
-                System.out.println("Германия");
-                break;
-            default:
-                System.out.println("Неизвестная страна");
+            }
+            switch (inputCity) {
+                case "Москва":
+                case "Владивосток":
+                case "Ростов":
+                    System.out.println("Россия");
+                    break;
+                case "Рим":
+                case "Милан":
+                case "Турин":
+                    System.out.println("Италия");
+                    break;
+                case "Ливерпуль":
+                case "Манчестер":
+                case "Лондон":
+                    System.out.println("Англия");
+                    break;
+                case "Берлин":
+                case "Мюнхен":
+                case "Кёльн":
+                    System.out.println("Германия");
+                    break;
+                default:
+                    System.out.println("Неизвестная страна");
+            }
         }
     }
 }
+

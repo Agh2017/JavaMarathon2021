@@ -15,7 +15,7 @@ public class Task3 {
                 while (i < secondNumber) {
                     i++;
                     if (i % 5 == 0 && i % 10 != 0) {
-                        System.out.print(i+" ");
+                        System.out.print(i + " ");
                     }
                 }
             }
