@@ -24,7 +24,7 @@ public class TestFigures {
 
         double sumRedPerimeters = 0;
         for (Figure figure : figures) {
-            if (figure.getColor().equals("Red")) {
+            if ("Red".equals(figure.getColor())) {
                 sumRedPerimeters += figure.perimeter();
             }
         }
@@ -35,7 +35,7 @@ public class TestFigures {
 
         double sumRedAreas = 0;
         for (Figure figure : figures) {
-            if (figure.getColor().equals("Red")) {
+            if ("Red".equals(figure.getColor())) {
                 sumRedAreas += figure.area();
             }
         }

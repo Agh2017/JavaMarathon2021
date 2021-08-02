@@ -11,7 +11,7 @@ public class Teacher {
 
     public void evaluate(String student) {
         int grade = 2 + (int) Math.round(Math.random()*3);
-        String textGrade = "* search error *";
+        String textGrade = null;
         switch (grade) {
             case 2:
                 textGrade = "неудовлетворительно";
@@ -22,7 +22,7 @@ public class Teacher {
             case 4:
                 textGrade = "хорошо";
                 break;
-            case 5:
+            default:
                 textGrade = "отлично";
         }
         System.out.println("Преподаватель " + name + " оценил студента с именем " + student + " по предмету " + subject + " на оценку " + textGrade + ".");

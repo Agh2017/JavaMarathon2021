@@ -8,13 +8,13 @@ public class Player {
 
     public Player(int stamina) {
         this.stamina = stamina;
-        countPlayers += 1;
+        if (countPlayers < Task2.getMaxCount()) {
+            countPlayers += 1;
+        }
+
     }
 
     public static int getCountPlayers() {
-        if (countPlayers > 6) {
-            countPlayers = 6;
-        }
         return countPlayers;
     }
 
