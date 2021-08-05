@@ -11,7 +11,6 @@ public abstract class Hero implements PhysAttack {
     double physDef; // (процент поглощения физического урона)
     double magicDef; // (процент поглощения магического урона)
     int physAtt; //(величина физической атаки), по необходимости
-    int magicAtt; //(величина магической атаки), по необходимости
 
     public Hero() {
         health = MAX_HEALTH;
@@ -33,7 +32,6 @@ public abstract class Hero implements PhysAttack {
                 ", physDef=" + physDef +
                 ", magicDef=" + magicDef +
                 ", physAtt=" + physAtt +
-                ", magicAtt=" + magicAtt +
                 '}';
     }
 }

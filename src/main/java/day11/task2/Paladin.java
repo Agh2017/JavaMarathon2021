@@ -9,7 +9,6 @@ public class Paladin extends Hero implements Healer {
 
     public Paladin() {
 
-        magicAtt = 0;
         magicDef = 0.2;
         physAtt = 15;
         physDef = 0.5;

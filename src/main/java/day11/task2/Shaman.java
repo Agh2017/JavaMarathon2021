@@ -5,7 +5,7 @@ import day11.task2.Interfeces.MagicAttack;
 
 public class Shaman extends Hero implements Healer, MagicAttack {
 
-
+    private static int magicAtt;
     private static final int HEAL_HIMSELF = 50;
     private static final int HEAL_TEAMMATE = 30;
 

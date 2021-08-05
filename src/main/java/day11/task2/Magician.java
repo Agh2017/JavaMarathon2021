@@ -5,6 +5,8 @@ import day11.task2.Interfeces.MagicAttack;
 
 public class Magician extends Hero implements MagicAttack {
 
+    private int magicAtt;
+
     public Magician() {
         physAtt = 5;
         physDef = 0;
