@@ -5,6 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+/*
+1. Создать список строк, добавить в него 5 марок автомобилей, вывести список в консоль. Добавить в середину еще 1
+автомобиль, удалить самый первый автомобиль из списка. Вывести список в консоль.
+
+
+ */
 public class Task1 {
 
     private static List<String> brands = new ArrayList<>();
