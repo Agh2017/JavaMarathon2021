@@ -6,7 +6,7 @@ import java.util.List;
 
 public class MusicBand {
 
-    private static final int AMOUNT = 11;
+
     public static List<MusicBand> musicBands = new ArrayList<>();
     private String name;
     private int year;

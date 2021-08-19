@@ -2,6 +2,9 @@ package day12.task4;
 
 import day12.task4.MusicBand.GroupMembers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*
 *Выполнять в подпапке task4 в day12*
 Скопировать MusicBand из прошлого задания и доработать таким образом, чтобы в группу можно было добавлять и удалять
@@ -15,7 +18,10 @@ import day12.task4.MusicBand.GroupMembers;
 
  */
 public class Task4 {
+    public static List<MusicBand> musicBands;
+
     public static void main(String[] args) {
+
         MusicBand band1 = new MusicBand("Самолет", 1998);
         String member1 = "Ирвин Волков";
         String member2 = "Лена Курочкина";
