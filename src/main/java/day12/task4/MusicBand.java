@@ -1,69 +1,60 @@
 package day12.task4;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class MusicBand {
 
-
-    public static List<MusicBand> musicBands = new ArrayList<>();
     private String name;
     private int year;
-    private List<String> groupMembers = new ArrayList<>();
+    private List<String> members;
 
-
-    public MusicBand(String name, int year) {
+    public MusicBand(String name, int year, List<String> members) {
         this.name = name;
+        this.year = year;
+        this.members = members;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setYear(int year) {
         this.year = year;
     }
 
-    public static Object getBands() {
-        return musicBands;
+    public String getName() {
+        return name;
     }
 
-    public static void transferMembers(MusicBand band1, MusicBand band2) {
-        for (String member : band1.getGroupMembers()) {
-            band2.groupMembers.add(member);
-        }
-        band1.groupMembers.clear();
-
+    public int getYear() {
+        return year;
     }
 
-    public static void printMembers(MusicBand musicBands) {
-        System.out.println("MusicBand{" +
-                "members='" + musicBands.getGroupMembers() + '}');
+    public List<String> getMembers() {
+        return members;
     }
 
+    public void setMembers(List<String> members) {
+        this.members = members;
+    }
+
+    public static void transferMembers(MusicBand a, MusicBand b) {
+        for (String member : a.getMembers())
+            b.getMembers().add(member);
+        a.getMembers().clear();
+    }
+
+    public void printMembers() {
+        System.out.println(this.members);
+    }
 
     @Override
     public String toString() {
         return "MusicBand{" +
                 "name='" + name + '\'' +
-                ", year=" + year +
-                ", groupMembers=" + groupMembers +
+                ", year='" + year + '\'' +
                 '}';
     }
-
-    public void setGroupMembers(String member) {
-        groupMembers.add(member);
-    }
-
-    public List<String> getGroupMembers() {
-        return this.groupMembers;
-    }
-
-    public class GroupMembers {
-        private String groupMembers;
-
-        public GroupMembers(String member) {
-        }
-    }
-
-    public static void shuffleGroupList() {
-        Collections.shuffle(musicBands);
-    }
 }
-
 
 

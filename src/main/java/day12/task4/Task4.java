@@ -1,7 +1,5 @@
 package day12.task4;
 
-import day12.task4.MusicBand.GroupMembers;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,24 +16,27 @@ import java.util.List;
 
  */
 public class Task4 {
-    public static List<MusicBand> musicBands;
+
 
     public static void main(String[] args) {
+        List<String> members1 = new ArrayList<>();
+        members1.add("Ирвин Волков");
+        members1.add("Лена Курочкина");
 
-        MusicBand band1 = new MusicBand("Самолет", 1998);
-        String member1 = "Ирвин Волков";
-        String member2 = "Лена Курочкина";
-        band1.setGroupMembers(member1);
-        band1.setGroupMembers(member2);
-        MusicBand.printMembers(band1);
-        MusicBand band2 = new MusicBand("Самолет2", 2010);
-        String member3 = "Влад Петров";
-        String member4 = "Вася Епифеев";
-        band2.setGroupMembers(member3);
-        band2.setGroupMembers(member4);
-        MusicBand.printMembers(band2);
+        MusicBand band1 = new MusicBand("Самолет", 1998, members1);
+
+        List<String> members2 = new ArrayList<>();
+        members2.add("Влад Петров");
+        members2.add("Вася Епифеев");
+
+        MusicBand band2 = new MusicBand("Самолет2", 2010, members2);
+
+        band1.printMembers();
+        band2.printMembers();
+
         MusicBand.transferMembers(band1, band2);
-        MusicBand.printMembers(band2);
 
+        band1.printMembers();
+        band2.printMembers();
     }
 }
