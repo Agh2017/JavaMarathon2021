@@ -20,11 +20,12 @@ import static day12.task3.MusicBand.musicBands;
 
 public class Task3 {
 
+    private static final int AMOUNT = 11;
     private static final int BORDER = 2000;
     private static List<MusicBand> bands2000 = new ArrayList<>();
 
     public static void main(String[] args) {
-        MusicBand.makeBands();
+        makeBands();
         MusicBand.shuffleGroupList();
         System.out.println(MusicBand.getBands());
         groupsAfter2000( musicBands);
@@ -38,5 +39,15 @@ public class Task3 {
             }
         }
         return bands2000;
+    }
+
+    public static void makeBands() {
+        String[] groupList = {"Aerosmith", "1973", "Ace of Base", "1992", "Backstreet Boys", "1993", "Bad Boys Blue", "1984", "Gorg", "2020", "Hi-Fi", "1998", "Kamelot", "1991", "Pink Floyd", "1965", "Ленинград", "1996", "Airbourne", "2003", "Cellar Darling", "2016"};
+
+        for (int i=0, j=0; i<AMOUNT-1; i++, j+=2) {
+            int year = Integer.parseInt (groupList[j+1]);
+            MusicBand band = new MusicBand(groupList[j], year);
+            musicBands.add(i,band);
+        }
     }
 }
