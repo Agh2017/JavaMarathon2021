@@ -1,5 +1,7 @@
 package day12.task4;
 
+import day12.task5.MusicArtist;
+
 import java.util.List;
 
 public class MusicBand {

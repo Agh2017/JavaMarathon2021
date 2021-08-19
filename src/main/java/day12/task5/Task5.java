@@ -15,17 +15,24 @@ import java.util.List;
  */
 public class Task5 {
     public static void main(String[] args) {
+        List<MusicArtist> members1 = new ArrayList<>();
+        members1.add(new MusicArtist("Ирвин Волков", 22));
+        members1.add(new MusicArtist("Лена Курочкина", 25));
 
-        List <MusicArtist> members = new ArrayList<>();
-        members.add(new MusicArtist("Ирвин Волков", 1985));
-        members.add(new MusicArtist("Лена Курочкина", 1999));
-        MusicBand band1 =new MusicBand("Самолет",2010,members);
-        List <MusicArtist> members2 = new ArrayList<>();
-        members.add(new MusicArtist("Влад Петров", 1978));
-        members.add(new MusicArtist("Вася Епифеев", 1979));
-        MusicBand band2 =new MusicBand("Аэроплан",2000,members2);
+        MusicBand band1 = new MusicBand("Самолет", 2020, members1);
+
+        List<MusicArtist> members2 = new ArrayList<>();
+        members2.add(new MusicArtist("Влад Петров", 30));
+        members2.add(new MusicArtist("Вася Епифеев", 33));
+
+        MusicBand band2 = new MusicBand("Самолет2", 2010, members2);
+
+        band1.printMember();
+        band2.printMember();
+
         MusicBand.transferMembers(band1, band2);
-        MusicBand.printMembers(band2);
 
+        band1.printMember();
+        band2.printMember();
     }
 }

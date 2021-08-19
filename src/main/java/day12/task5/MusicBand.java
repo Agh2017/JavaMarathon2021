@@ -1,70 +1,60 @@
 package day12.task5;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class MusicBand {
 
-    private static final int AMOUNT = 11;
-    public static List<MusicBand> musicBands = new ArrayList<>();
     private String name;
     private int year;
-    private List<MusicArtist> groupMembers;
+    private List<MusicArtist> members;
 
-
-    public MusicBand(String name, int year, List<MusicArtist> groupMembers) {
+    public MusicBand(String name, int year, List<MusicArtist> members) {
         this.name = name;
         this.year = year;
-        this.groupMembers = groupMembers;
+        this.members = members;
     }
 
-    public static Object getBands() {
-        return musicBands;
+    public String getName() {
+        return name;
     }
 
-    public static void transferMembers(MusicBand band1, MusicBand band2) {
-        for (MusicArtist member : band1.getMembers()) {
-            band2.groupMembers.add(member);
-        }
-        band1.groupMembers.clear();
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public void setMembers(List<MusicArtist> members) {
+        this.members = members;
     }
 
     public int getYear() {
         return year;
     }
 
-
-    public static void printMembers(MusicBand musicBands) {
-        System.out.println("MusicBand{" +
-                "members='" + musicBands.getMembers() + '}');
+    public List<MusicArtist> getMembers() {
+        return members;
     }
 
+    public static void transferMembers(MusicBand a, MusicBand b){
+        for (MusicArtist member: a.getMembers())
+            b.getMembers().add(member);
+        a.getMembers().clear();
+    }
+
+    public void printMember(){
+        System.out.println(this.members);
+    }
 
     @Override
     public String toString() {
         return "MusicBand{" +
                 "name='" + name + '\'' +
-                ", year=" + year +
-                ", groupMembers=" + groupMembers +
+                ", year='" + year + '\'' +
                 '}';
     }
-
-    public List<MusicArtist> getMembers() {
-        return groupMembers;
-    }
-
-    public void setGroupMembers(List<MusicArtist> groupMembers) {
-        this.groupMembers = groupMembers;
-    }
-
-    public static void shuffleGroupList() {
-        Collections.shuffle(musicBands);
-    }
-
-
 }
-
 
 
