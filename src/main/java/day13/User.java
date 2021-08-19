@@ -5,7 +5,7 @@ import java.util.List;
 
 public class User {
     private String username;
-    List<User> subscriptions;
+    private List<User> subscriptions;
 
     public User(String username) {
         this.username = username;
@@ -22,13 +22,12 @@ public class User {
 
     public void subscribe(User user) {
         this.subscriptions.add(user);
-
     }
 
     public boolean isSubscribed(User user) {
         for (User currentUser : subscriptions
         ) {
-            if (currentUser.getUsername().equals(user.getUsername())) {
+            if (subscriptions.contains(currentUser)) {
                 return true;
             }
         }
