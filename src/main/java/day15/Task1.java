@@ -43,6 +43,7 @@ public class Task1 {
         try {
             Scanner scanner = new Scanner(file);
             PrintWriter pw = new PrintWriter(fileOut);
+
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 String[] shoesData = line.split(";");
@@ -52,10 +53,8 @@ public class Task1 {
             }
             pw.close();
             scanner.close();
-
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
-            ;
         } catch (NumberFormatException e) {
             System.out.println("Неизвестное исключение");
         } catch (ArrayIndexOutOfBoundsException e) {
