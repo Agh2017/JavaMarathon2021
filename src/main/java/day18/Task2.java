@@ -2,7 +2,7 @@ package day18;
 
 public class Task2 {
 
-    private static final int x = 717771237;
+    private static final int x = -112380;
     private static final int reference = 7;
     private static int count;
 
