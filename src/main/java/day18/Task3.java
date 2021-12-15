@@ -16,7 +16,6 @@ public class Task3 {
         dfs(node.getLeft());
         System.out.print(node.getValue() + " ");
         dfs(node.getRight());
-        //System.out.print(node.getValue() + " ");  почему так?
 
     }
 

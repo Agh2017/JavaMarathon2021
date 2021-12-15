@@ -1,4 +1,4 @@
-package day19.task3;
+package day19;
 
 /**
  * @author Neil Alishev
